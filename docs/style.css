@@ -91,10 +91,6 @@ a {
   color: #1a73e8;
 }
 
-a:hover {
-  color: #0f5bd6;
-}
-
 /* Utility */
 .placeholder {
   color: #888;
