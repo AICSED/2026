@@ -12,16 +12,7 @@ body {
   color: #333;
   line-height: 1.6;
 }
-body::before {
-    content: "";
-    position: fixed;
-    inset: 0;
 
-    background: url("img/bg.jpg") center/cover no-repeat;
-    opacity: 0.2; /* image transparency */
-    
-    z-index: -1;
-}
 /* Layout */
 header {
   background-color: #1a73e8;
@@ -112,4 +103,34 @@ a {
     display: block;
     margin: 8px 0;
   }
+}
+body {
+    margin: 0;
+    min-height: 100vh;
+
+    /* Background image */
+    background-image: url("M-6o2(1).jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+    position: relative;
+}
+
+/* Semi-transparent white overlay */
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: rgba(255, 255, 255, 0.35); /* adjust transparency */
+    z-index: -1;
+}
+
+/* Keep content above the overlay */
+header,
+nav,
+main {
+    position: relative;
+    z-index: 1;
 }
