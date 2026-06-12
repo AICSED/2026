@@ -12,7 +12,16 @@ body {
   color: #333;
   line-height: 1.6;
 }
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
 
+    background: url("img/bg.jpg") center/cover no-repeat;
+    opacity: 0.2; /* image transparency */
+    
+    z-index: -1;
+}
 /* Layout */
 header {
   background-color: #1a73e8;
